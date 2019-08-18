@@ -58,7 +58,7 @@ end
 
 
 delete '/articles/:id/delete' do
-  Article.destroy_all
+  Article.find(params[:id]).destroy
     redirect '/articles'
   end
 
