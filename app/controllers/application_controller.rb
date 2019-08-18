@@ -44,11 +44,11 @@ end
 
 patch '/articles/:id' do
   Article.find(params[:id]).tap do |article|
-    article.update(
+    Article.update(
       title: params[:title],
     content: params[:content],
         )
-    article.save
+    Article.save
     redirect "/articles/#{article.id}"
 
   end
