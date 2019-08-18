@@ -48,7 +48,7 @@ patch '/articles/:id' do
       title: params[:title],
     content: params[:content],
         )
-    Article.save
+  
     redirect "/articles/#{article.id}"
 
   end
