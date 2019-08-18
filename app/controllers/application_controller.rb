@@ -57,7 +57,7 @@ end
 
 
 
-delete '/articles/:id' do
+delete '/articles/:id/delete' do
   Article.destroy_all
     redirect '/articles'
   end
